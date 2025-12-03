@@ -1,0 +1,9 @@
+@font-face {
+    font-family:"Bowlby_One_sc" ;
+    src: url("../Fonts/Bowlby_One_SC/BowlbyOneSC-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family:"Comic_Relief";
+    src: url("../Fonts/Comic_Relief/ComicRelief-Regular.ttf") format("truetype");
+}

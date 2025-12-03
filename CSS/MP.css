@@ -1,0 +1,112 @@
+/* ==== SECCIÓN PRINCIPAL ==== */
+.seccion-materiales-paletas {
+  background-color: var(--color-primary);
+  padding: 50px 5%;
+}
+
+.MP-titulo {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--color-negro);
+  font-family: "Bowlby_One_sc";
+}
+
+.MP-contenido {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  font-family: "Comic_Relief";
+}
+
+/* ==== BLOQUE DE TEXTO ==== */
+.MP-texto {
+  width: 23%;
+  font-family: "Comic_Relief";
+}
+
+.MP-texto h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  line-height: 1.2;
+  font-family: "Bowlby_One_sc";
+}
+
+.MP-texto p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "Comic_Relief";
+}
+
+/* ==== CONTENEDOR DE CARRUSELES ==== */
+.MP-carruseles {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ==== CARRUSEL ==== */
+.carrusel-contenedor {
+  background-color: var(--color-marronClaro);
+  border: 2px solid var(--color-marronOscuro);
+  border-radius: 12px;
+  padding: 15px 25px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 1000px; 
+  margin: 0 auto;
+}
+
+.carrusel-titulo {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--color-negro);
+}
+
+.carrusel-infinito {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+}
+
+.carrusel-track {
+  display: flex;
+  flex-wrap: nowrap;
+  animation: deslizarInfinito 10s linear infinite;
+  gap: 12px;
+}
+
+.carrusel-grupo {
+  display: flex;
+  gap: 12px;
+}
+
+.carrusel-grupo img {
+  width: 130px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid var(--color-marronOscuro);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carrusel-grupo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+/* Animación infinita sin saltos */
+@keyframes deslizarInfinito {
+  from   { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Pausa al pasar el mouse */
+.carrusel-track:hover {
+  animation-play-state: paused;
+}

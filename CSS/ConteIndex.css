@@ -1,0 +1,59 @@
+.contenido {
+  padding: 40px;
+  background-color: var(--color-primary);
+}
+
+.contenido-titulo {
+  font-size: 36px;
+  font-family: "Bowlby_One_sc";
+  margin-bottom: 10px;
+  animation: fadeUp 0.8s ease-out;
+}
+
+.contenido-subtitulo {
+  font-size: 20px;
+  font-family: "Comic_Relief";
+  color: black;
+  margin-bottom: 30px;
+  animation: fadeUp 1s ease-out;
+}
+
+.contenido-bloque {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.contenido-imagen{
+  flex: 0 0 auto;
+}
+.contenido-imagen img {
+  width: 650px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.contenido-texto {
+  flex: 1;
+  max-width: 500px;
+  text-align: left;
+  font-family: "Comic_Relief";
+  margin-top: -30px;
+  opacity: 0;
+  transform: translateX(40px); /*desplazado hacia la derecha */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.contenido-texto.visible {
+  opacity: 1;
+  transform: translateX(0); /*vuelve a su lugar */
+}
+
+.recuadro {
+  background-color: var(--color-marronClaro);
+  border: 2px solid var(--color-marronOscuro);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: fadeRight 0.8s ease-out;
+}

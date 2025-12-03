@@ -1,0 +1,33 @@
+/* ====== SECCIÓN GENERAL ====== */
+.seccion-gestion {
+    background-color: #d8d1bc;
+    padding: 60px 5%;
+    font-family: "Comic_Relief";
+}
+
+/* ====== TÍTULO ====== */
+.gestion-titulo {
+    font-size: 2rem;
+    margin-bottom: 35px;
+    color: #000;
+    font-weight: 800;
+    font-family: "Bowlby_One_sc";
+}
+
+/* ====== CAJA MARRÓN ====== */
+.gestion-caja {
+    background-color: #a1866f; /* marrón claro */
+    border: 3px solid #4e3e32; /* marrón oscuro */
+    padding: 35px;
+    max-width: 950px;           /* para que no ocupe toda la pantalla */
+    margin: 0 auto;             /* centrado */
+    border-radius: 4px;
+}
+
+/* ====== TEXTO DEL CONTENIDO ====== */
+.gestion-caja p {
+    font-size: 1.05rem;
+    color: #000;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}

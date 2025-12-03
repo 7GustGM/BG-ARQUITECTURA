@@ -1,0 +1,125 @@
+/* =========================================================
+   SECCIÓN PLANOS — BG ARQUITECTURA
+   ========================================================= */
+
+/* Contenedor general */
+.planos {
+  background-color: var(--color-primary);
+  padding: 60px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================================================
+   Título y subtítulo
+   ========================================================= */
+.planos-titulo {
+  font-size: 30px; /*Título grande */
+  font-family: "Bowlby_One_sc";
+  letter-spacing: 1.5px;
+  color: black;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  animation: fadeUp 0.8s ease-out;
+}
+
+.planos-subtitulo {
+  font-size: 22px;
+  font-family: "Comic_Relief";
+  color: #333;
+  margin-bottom: 40px;
+  animation: fadeUp 1s ease-out;
+}
+
+/* =========================================================
+   Carrusel de imágenes
+   ========================================================= */
+.carrusel {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto 60px auto; /* centrado + espacio inferior */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carrusel-imagenes {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-imagenes img {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Botones de navegación */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* =========================================================
+   Texto descriptivo debajo del carrusel
+   ========================================================= */
+.planos-texto {
+  max-width: 800px;
+  margin: 40px auto 0 auto;
+  text-align: center;
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.planos-texto.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.planos-texto .recuadro {
+  background-color: var(--color-marronClaro);
+  border: 2px solid var(--color-marronOscuro);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: rgb(17, 16, 16);
+}
+
+.planos-texto h3 {
+  font-size: 28px;
+  font-family: "Bowlby_One_sc";
+  margin-bottom: 15px;
+}
+
+.planos-texto p {
+  font-size: 18px;
+  font-family: "Comic_Relief";
+  color: #000000;
+  line-height: 1.5;
+}

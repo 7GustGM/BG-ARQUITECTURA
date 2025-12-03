@@ -1,0 +1,147 @@
+/*Fuentes*/
+@import url("fonts.css");
+
+:root{
+    --color-primary:#D9D3C1;
+    --color-marronClaro:#8C7A64;
+    --color-marronOscuro:#73624D;
+    --color-header:#BFB39B;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+  background-color: var(--color-header);
+  padding: 20px 30px;
+  border-bottom: 1px solid black;
+}
+
+.marca {
+  margin-bottom: 10px;
+}
+
+.titulo {
+  font-size: 40px;
+  margin: 0;
+  letter-spacing: 2px;
+  font-family: "Bowlby_One_sc";
+  color: black;
+}
+
+.eslogan {
+  font-size: 20px;
+  margin: 0;
+  padding: 10px 0;
+  font-family: "Comic_Relief";
+  color: #333;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.main-nav {
+  background-color: var(--color-marronOscuro);
+  padding: 10px 20px;
+  border-radius: 10px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 100px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: white;
+  font-family: "Comic_Relief";
+  font-size: 18px;
+  letter-spacing:1.5px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.main-nav a:hover {
+  transform: translateY(-2px);
+  color: var(--color-primary); 
+}
+
+.user-nav {
+  display: flex;
+  align-items: center;
+}
+
+.user-nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user-nav li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Comic_Relief";
+  font-size: 18px;
+}
+.user-nav a {
+  text-decoration: none;
+  color: black;
+  font-family: "Comic_Relief";
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.user-nav a:hover {
+  transform: translateY(-2px);
+  color: var(--color-marronOscuro);
+}
+
+.boton,
+.boton1 {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+/*Animacion para el titulo y eslogan*/
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.titulo,
+.eslogan {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.titulo.visible,
+.eslogan.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

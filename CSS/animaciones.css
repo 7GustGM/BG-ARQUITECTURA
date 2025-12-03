@@ -1,0 +1,38 @@
+/* === Animaciones de entrada === */
+
+/* Estado inicial: oculto y desplazado */
+.fade-up,
+.fade-right,
+.fade-left,
+.fade-down {
+  opacity: 0;
+  visibility: hidden;
+  will-change: transform, opacity;
+  transition:
+    opacity var(--fade-duration, 0.8s) ease-out var(--fade-delay, 0s),
+    transform var(--fade-duration, 0.8s) ease-out var(--fade-delay, 0s);
+}
+
+/* Direcciones */
+.fade-up {
+  transform: translateY(20px);
+}
+
+.fade-right {
+  transform: translateX(40px);
+}
+
+.fade-left {
+  transform: translateX(-40px);
+}
+
+.fade-down {
+  transform: translateY(-20px);
+}
+
+/* Estado visible: aparece y se posiciona */
+.visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+  visibility: visible;
+}
